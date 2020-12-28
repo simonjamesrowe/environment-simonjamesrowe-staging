@@ -24,3 +24,9 @@ jenkins:
   Servers:
     Global: {}
 prow: {}
+react-ui:
+  apiUrl: https://api-jx-staging.simonjamesrowe.com
+  gaTrackingToken: UA-179384022-3
+  hotJarTrackingToken: 2022739
+strapi-cms:
+  databaseName: cms-staging
