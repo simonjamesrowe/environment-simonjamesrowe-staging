@@ -1,0 +1,35 @@
+
+Showing logs for build [32msimonjamesrowe-environment-simo-t64j7-4[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1609191177.7943196,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32msimonjamesrowe-environment-simo-t64j7-4[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32msimonjamesrowe-environment-simo-t64j7-4[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32msimonjamesrowe-environment-simo-t64j7-4[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-simonjamesrowe-environment-simo-t64j7-rjd5n[0m
+{"level":"info","ts":1609191184.3878782,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/simonjamesrowe/environment-simonjamesrowe-staging.git @ v0.0.1 in path /workspace/source"}
+{"level":"warn","ts":1609191184.3879886,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /****/.ssh: file exists"}
+{"level":"info","ts":1609191184.447337,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32msimonjamesrowe-environment-simo-t64j7-4[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32msimonjamesrowe-environment-simo-t64j7-4[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32msimonjamesrowe-environment-simo-t64j7-4[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /tekton/home/git/credentials
+
+Showing logs for build [32msimonjamesrowe-environment-simo-t64j7-4[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-apply[0m
+Modified file /workspace/source/env/Chart.yaml to set the chart to version 4
+creating the lock configmap **-lock-**-staging
+lock configmap **-lock-**-staging created
+Ignoring templates/.gitignore
+Ignoring templates/wildcardcert-secret.yaml
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+cleaning the lock configmap **-lock-**-staging
+error: failed to add chart repositories: failed to add the Helm repository with URL 'https://storage.googleapis.com/chartmuseum.jenkins-x.io': failed to add the repository 'storage.googleapis.com' with URL 'https://storage.googleapis.com/chartmuseum.jenkins-x.io': failed to run 'helm repo add storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io' command in directory '/tmp/**-helm-apply-766907757/env', output: 'Error: Couldn't load repositories file (/tekton/home/.helm/repository/repositories.yaml).
+You might need to run `helm init` (or `helm init --client-only` if tiller is already installed)'
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-helm-apply'. The execution of the pipeline has stopped.[0m
