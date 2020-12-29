@@ -2,17 +2,20 @@ dependencies:
 - name: api-gateway
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.6
-- name: exposecontroller
-  version: 2.3.118
+- alias: expose
+  name: exposecontroller
   repository: http://chartmuseum.jenkins-x.io
-  alias: expose
-- name: exposecontroller
   version: 2.3.118
+- alias: cleanup
+  name: exposecontroller
   repository: http://chartmuseum.jenkins-x.io
-  alias: cleanup
+  version: 2.3.118
 - name: react-ui
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.44
+- name: start.spring.io
+  repository: http://jenkins-x-chartmuseum:8080
+  version: 0.0.10
 - name: strapi-cms
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.17
