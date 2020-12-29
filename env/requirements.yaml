@@ -15,7 +15,7 @@ dependencies:
   version: 0.0.44
 - name: start.spring.io
   repository: http://jenkins-x-chartmuseum:8080
-  version: 0.0.12
+  version: 0.0.13
 - name: strapi-cms
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.17
