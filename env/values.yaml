@@ -30,3 +30,5 @@ react-ui:
   hotJarTrackingToken: 2022739
 strapi-cms:
   databaseName: cms-staging
+start:
+  replicaCount: 0
