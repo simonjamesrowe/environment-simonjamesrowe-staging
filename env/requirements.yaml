@@ -13,6 +13,9 @@ dependencies:
 - name: react-ui
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.44
+- name: start
+  repository: http://jenkins-x-chartmuseum:8080
+  version: 0.0.15
 - name: start.spring.io
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.12
