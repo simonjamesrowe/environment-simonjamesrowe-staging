@@ -1,0 +1,46 @@
+
+Showing logs for build [32msimonjamesrowe-environment-simo-lnn5s-1[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1609266905.2613401,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32msimonjamesrowe-environment-simo-lnn5s-1[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32msimonjamesrowe-environment-simo-lnn5s-1[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32msimonjamesrowe-environment-simo-lnn5s-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-simonjamesrowe-environment-simo-lnn5s-vklnl[0m
+{"level":"info","ts":1609266911.4559913,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/simonjamesrowe/environment-simonjamesrowe-staging.git @ master in path /workspace/source"}
+{"level":"warn","ts":1609266911.4562175,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /****/.ssh: file exists"}
+{"level":"info","ts":1609266911.50623,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32msimonjamesrowe-environment-simo-lnn5s-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32msimonjamesrowe-environment-simo-lnn5s-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:d7cbc5c4cf4296041f206fb5b5444baf47b8561e,5:7984fea36f496ba46902807a71b5f5efd1527170
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git fetch origin --unshallow 7984fea36f496ba46902807a71b5f5efd1527170: d7cbc5c4cf4296041f206fb5b5444baf47b8561e:
+DEBUG: ran git fetch --unshallow origin 7984fea36f496ba46902807a71b5f5efd1527170: d7cbc5c4cf4296041f206fb5b5444baf47b8561e: in 
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard d7cbc5c4cf4296041f206fb5b5444baf47b8561e
+DEBUG: ran git reset --hard d7cbc5c4cf4296041f206fb5b5444baf47b8561e in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge 7984fea36f496ba46902807a71b5f5efd1527170
+DEBUG: ran git merge 7984fea36f496ba46902807a71b5f5efd1527170 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e d7cbc5c4cf4296041f206fb5b5444baf47b8561e..HEAD
+Merged SHA 7984fea36f496ba46902807a71b5f5efd1527170 with commit message 'chore: Promote start to version 0.0.15' into base branch master
+
+Showing logs for build [32msimonjamesrowe-environment-simo-lnn5s-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-build[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
+error: failed to lint the chart '.': failed to run 'helm lint --set tags.**-lint=true --set global.**Lint=true --set-string global.**TypeEnv=lint --values values.yaml' command in directory '.', output: '==> Linting .
+[ERROR] templates/: render error in "env/charts/start.spring.io/templates/service.yaml": template: env/charts/start.spring.io/templates/service.yaml:4:14: executing "env/charts/start.spring.io/templates/service.yaml" at <.Values.service.name>: nil pointer evaluating interface {}.name
+
+Error: 1 chart(s) linted, 1 chart(s) failed'
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-helm-build'. The execution of the pipeline has stopped.[0m
