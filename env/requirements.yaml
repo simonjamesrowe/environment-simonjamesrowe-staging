@@ -13,6 +13,9 @@ dependencies:
 - name: react-ui
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.46
+- name: search-service
+  repository: http://jenkins-x-chartmuseum:8080
+  version: 0.0.3
 - name: start
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.23
