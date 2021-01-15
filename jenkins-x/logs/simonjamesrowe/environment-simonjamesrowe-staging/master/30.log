@@ -1,0 +1,39 @@
+
+Showing logs for build [32msimonjamesrowe-environment-simo-fvzxq-30[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1610670530.159137,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32msimonjamesrowe-environment-simo-fvzxq-30[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32msimonjamesrowe-environment-simo-fvzxq-30[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32msimonjamesrowe-environment-simo-fvzxq-30[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-simonjamesrowe-environment-simo-fvzxq-scbxn[0m
+{"level":"info","ts":1610670537.6088717,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/simonjamesrowe/environment-simonjamesrowe-staging.git @ v0.0.27 in path /workspace/source"}
+{"level":"warn","ts":1610670537.6091044,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /****/.ssh: file exists"}
+{"level":"info","ts":1610670537.6923862,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32msimonjamesrowe-environment-simo-fvzxq-30[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32msimonjamesrowe-environment-simo-fvzxq-30[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:6de4b49a458f6afe5e54a346920fa013137c091f
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32msimonjamesrowe-environment-simo-fvzxq-30[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /tekton/home/git/credentials
+
+Showing logs for build [32msimonjamesrowe-environment-simo-fvzxq-30[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-apply[0m
+Modified file /workspace/source/env/Chart.yaml to set the chart to version 30
+creating the lock configmap **-lock-**-staging
+lock configmap **-lock-**-staging created
+Ignoring templates/.gitignore
+Ignoring templates/wildcardcert-secret.yaml
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
+
+release.jenkins.io "search-service-0.0.4" deleted
+cleaning the lock configmap **-lock-**-staging
