@@ -18,7 +18,7 @@ dependencies:
   version: 0.0.28
 - name: start
   repository: http://jenkins-x-chartmuseum:8080
-  version: 0.0.23
+  version: 0.0.24
 - name: strapi-cms
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.21
