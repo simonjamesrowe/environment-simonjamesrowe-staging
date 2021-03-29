@@ -28,11 +28,18 @@ react-ui:
   apiUrl: https://api-jx-staging.simonjamesrowe.com
   gaTrackingToken: UA-179384022-3
   hotJarTrackingToken: 2022739
-start:
-  replicaCount: 0
-strapi-cms:
-  databaseName: cms-staging
 search-service:
+  livenessProbe:
+    initialDelaySeconds: 10
+    periodSeconds: 10
+    successThreshold: 1
+    timeoutSeconds: 2
+  probePath: /actuator/health
+  readinessProbe:
+    failureThreshold: 1
+    periodSeconds: 10
+    successThreshold: 1
+    timeoutSeconds: 2
   resources:
     limits:
       cpu: 100m
@@ -40,14 +47,7 @@ search-service:
     requests:
       cpu: 100m
       memory: 128Mi
-  probePath: /actuator/health
-  livenessProbe:
-    initialDelaySeconds: 10
-    periodSeconds: 10
-    successThreshold: 1
-    timeoutSeconds: 2
-  readinessProbe:
-    failureThreshold: 1
-    periodSeconds: 10
-    successThreshold: 1
-    timeoutSeconds: 2
+start:
+  replicaCount: 0
+strapi-cms:
+  databaseName: cms-staging
