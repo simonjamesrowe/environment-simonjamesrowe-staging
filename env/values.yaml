@@ -32,3 +32,22 @@ start:
   replicaCount: 0
 strapi-cms:
   databaseName: cms-staging
+search-service:
+  resources:
+    limits:
+      cpu: 200m
+      memory: 128Mi
+    requests:
+      cpu: 100m
+      memory: 64Mi
+  probePath: /actuator/health
+  livenessProbe:
+    initialDelaySeconds: 10
+    periodSeconds: 10
+    successThreshold: 1
+    timeoutSeconds: 2
+  readinessProbe:
+    failureThreshold: 1
+    periodSeconds: 10
+    successThreshold: 1
+    timeoutSeconds: 2
