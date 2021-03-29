@@ -35,11 +35,11 @@ strapi-cms:
 search-service:
   resources:
     limits:
-      cpu: 200m
-      memory: 64Mi
+      cpu: 100m
+      memory: 128Mi
     requests:
-      cpu: 200m
-      memory: 64Mi
+      cpu: 100m
+      memory: 128Mi
   probePath: /actuator/health
   livenessProbe:
     initialDelaySeconds: 10
@@ -47,7 +47,7 @@ search-service:
     successThreshold: 1
     timeoutSeconds: 2
   readinessProbe:
-    failureThreshold: 2
+    failureThreshold: 1
     periodSeconds: 10
     successThreshold: 1
     timeoutSeconds: 2
