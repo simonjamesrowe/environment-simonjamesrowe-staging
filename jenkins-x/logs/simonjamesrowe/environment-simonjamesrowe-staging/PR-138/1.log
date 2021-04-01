@@ -1,0 +1,40 @@
+
+Showing logs for build [32msimonjamesrowe-environment-simo-tbkwm-1[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1617274027.3184562,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32msimonjamesrowe-environment-simo-tbkwm-1[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32msimonjamesrowe-environment-simo-tbkwm-1[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32msimonjamesrowe-environment-simo-tbkwm-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-simonjamesrowe-environment-simo-tbkwm-pn4f9[0m
+{"level":"info","ts":1617274035.0501878,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/simonjamesrowe/environment-simonjamesrowe-staging.git @ master in path /workspace/source"}
+{"level":"warn","ts":1617274035.0503404,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /****/.ssh: file exists"}
+{"level":"info","ts":1617274035.135789,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32msimonjamesrowe-environment-simo-tbkwm-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32msimonjamesrowe-environment-simo-tbkwm-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:c97ab730cd7b2c1474c21f45918dc2880f3339cc,138:16ca1bea118d8f1db26392d4c22f50e879489979
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow 16ca1bea118d8f1db26392d4c22f50e879489979: c97ab730cd7b2c1474c21f45918dc2880f3339cc:
+DEBUG: ran git fetch --unshallow origin 16ca1bea118d8f1db26392d4c22f50e879489979: c97ab730cd7b2c1474c21f45918dc2880f3339cc: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard c97ab730cd7b2c1474c21f45918dc2880f3339cc
+DEBUG: ran git reset --hard c97ab730cd7b2c1474c21f45918dc2880f3339cc in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge 16ca1bea118d8f1db26392d4c22f50e879489979
+DEBUG: ran git merge 16ca1bea118d8f1db26392d4c22f50e879489979 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e c97ab730cd7b2c1474c21f45918dc2880f3339cc..HEAD
+Merged SHA 16ca1bea118d8f1db26392d4c22f50e879489979 with commit message 'chore: Promote search-service to version 0.0.119' into base branch master
+
+Showing logs for build [32msimonjamesrowe-environment-simo-tbkwm-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-build[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
